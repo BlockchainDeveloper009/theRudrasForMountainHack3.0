@@ -13,13 +13,13 @@ async function main() {
 
   // const lockedAmount = hre.ethers.utils.parseEther("1");
 
-  const Lock = await hre.ethers.getContractFactory("writeDataToChain");
+  const Lock = await hre.ethers.getContractFactory("ElectionPromiseTracker");
   const lock = await Lock.deploy();
 
   await lock.deployed();
 
   console.log(
-    ` deployed to ${lock.address}`
+    ` 'ElectionPromiseTracker' deployed to '${lock.address}'`
   );
 }
 
@@ -29,3 +29,4 @@ main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+

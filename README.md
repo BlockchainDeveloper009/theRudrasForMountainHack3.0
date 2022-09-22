@@ -11,3 +11,7 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+//0x606A3597DBDa642D988C6E7B77fc31F5b4F50182
+
+
+npx hardhat run scripts/deploy.js --network rinkeby
