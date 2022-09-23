@@ -138,9 +138,9 @@ contract ElectionPromiseTrackerV2 is Initializable, ERC721Upgradeable, UUPSUpgra
 
 
     // function to return list of candidates with info, this should be an array
-    function getAllCandidatesList() public view returns (Candidate[] memory) {
+    function getAllCandidatesList() public view returns (address[] memory) {
        
-        return CandidatesList;
+        return candidatesAddress;
     }
      // function to return list of candidates with info, this should be an array
     function getAllCandidatesMap() public view returns (Candidate[] memory) {
@@ -196,7 +196,7 @@ contract ElectionPromiseTrackerV2 is Initializable, ERC721Upgradeable, UUPSUpgra
         return contractVersion;
     }
 
-
+    //should be rewritten Improvement11:
     //function to check if voter has voted on promise already
     function ifVoterHasAlreadyVoted(uint16 _promiseId, address voter)
         internal
